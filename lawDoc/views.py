@@ -548,29 +548,118 @@ def download(request):
         encoding='utf-8').readlines()  # 打开文件，读入每一行
     for s in lines:
         # print(legalDocument.sljg)
+        Doclist = []
+        if legalDocument.bt:
+            Doclist.append(legalDocument.bt)
+        else:
+            Doclist.append("无")
+        if legalDocument.wslx:
+            Doclist.append(legalDocument.wslx)
+        else:
+            Doclist.append("无")
+        if legalDocument.nf:
+            Doclist.append(legalDocument.nf)
+        else:
+            Doclist.append("无")
+        if legalDocument.slcx:
+            Doclist.append(legalDocument.slcx)
+        else:
+            Doclist.append("无")
+        if legalDocument.fycj:
+            Doclist.append(legalDocument.fycj)
+        else:
+            Doclist.append("无")
+        if legalDocument.dy:
+            Doclist.append(legalDocument.dy)
+        else:
+            Doclist.append("无")
+        if legalDocument.ah:
+            Doclist.append(legalDocument.ah)
+        else:
+            Doclist.append("无")
+        if legalDocument.dsrxx:
+            Doclist.append(legalDocument.dsrxx)
+        else:
+            Doclist.append("无")
+        if legalDocument.ajms:
+            Doclist.append(legalDocument.ajms)
+        else:
+            Doclist.append("无")
+        if legalDocument.sljg:
+            Doclist.append(legalDocument.sljg)
+        else:
+            Doclist.append("无")
+        if legalDocument.ysqqqk:
+            Doclist.append(legalDocument.ysqqqk)
+        else:
+            Doclist.append("无")
+        if legalDocument.ysdbqk:
+            Doclist.append(legalDocument.ysdbqk)
+        else:
+            Doclist.append("无")
+        if legalDocument.ysfycm:
+            Doclist.append(legalDocument.ysfycm)
+        else:
+            Doclist.append("无")
+        if legalDocument.ysfyrw:
+            Doclist.append(legalDocument.ysfyrw)
+        else:
+            Doclist.append("无")
+        if legalDocument.esqqqk:
+            Doclist.append(legalDocument.esqqqk)
+        else:
+            Doclist.append("无")
+        if legalDocument.bycm:
+            Doclist.append(legalDocument.bycm)
+        else:
+            Doclist.append("无")
+        if legalDocument.byrw:
+            Doclist.append(legalDocument.byrw)
+        else:
+            Doclist.append("无")
+        if legalDocument.spjg:
+            Doclist.append(legalDocument.spjg)
+        else:
+            Doclist.append("无")
+        if legalDocument.spry:
+            Doclist.append(legalDocument.spry)
+        else:
+            Doclist.append("无")
+        if legalDocument.sprq:
+            Doclist.append(legalDocument.sprq)
+        else:
+            Doclist.append("无")
+        if legalDocument.sjy:
+            Doclist.append(legalDocument.sjy)
+        else:
+            Doclist.append("无")
+        if legalDocument.xgft:
+            Doclist.append(legalDocument.xgft)
+        else:
+            Doclist.append("无")
         fp.write(
-            s.replace("标题", legalDocument.bt).replace(
-                "wenshuleixing", legalDocument.wslx).replace(
-                    "nianfen", legalDocument.nf).replace(
-                        "shenlichengxu", legalDocument.slcx).replace(
-                            "fayuancengji", legalDocument.fycj).replace(
-                                'diyu', legalDocument.dy)
-            .replace('anhao', legalDocument.ah).replace(
-                'dangshirenxingxi', legalDocument.dsrxx).replace(
-                    'anjianmiaoshu', legalDocument.ajms)
-            .replace('shenlijingguo', legalDocument.sljg).replace(
-                'yishenqingqiuqingkuang', legalDocument.ysqqqk).replace(
-                    'yishendabianqingkuang', legalDocument.ysdbqk).replace(
-                        'yishenfayuanchaming', legalDocument.ysfycm).replace(
-                            'yishenfayuanrenwei', legalDocument.ysfyrw)
-            .replace('ershenqingqiuqingkuang', legalDocument.esqqqk).replace(
-                'benyuanchaming', legalDocument.bycm).replace(
-                    'benyuanrenwei', legalDocument.byrw).replace(
-                        'shenpanjieguo', legalDocument.spjg).replace(
-                            'shenpanrenyuan', legalDocument.spry).replace(
-                                'shenpanriqi', legalDocument.sprq).replace(
-                                    'shujiyuan', legalDocument.sjy).replace(
-                                        'xiangguanfatiao', legalDocument.xgft))
+            s.replace("标题", Doclist[0])
+                .replace("wenshuleixing", Doclist[1])
+                .replace("nianfen", Doclist[2])
+                .replace("shenlichengxu", Doclist[3])
+                .replace("fayuancengji", Doclist[4])
+                .replace('diyu', Doclist[5])
+                .replace('anhao', Doclist[6]).
+                replace('dangshirenxingxi', Doclist[7])
+                .replace('anjianmiaoshu', Doclist[8])
+                .replace('shenlijingguo', Doclist[9])
+                .replace('yishenqingqiuqingkuang', Doclist[10])
+                .replace('yishendabianqingkuang', Doclist[11])
+                .replace('yishenfayuanchaming', Doclist[12])
+                .replace('yishenfayuanrenwei', Doclist[13])
+                .replace('ershenqingqiuqingkuang', Doclist[14])
+                .replace('benyuanchaming', Doclist[15])
+                .replace('benyuanrenwei', Doclist[16])
+                .replace('shenpanjieguo', Doclist[17])
+                .replace('shenpanrenyuan', Doclist[18])
+                .replace('shenpanriqi', Doclist[19])
+                .replace('shujiyuan', Doclist[20])
+                .replace('xiangguanfatiao', Doclist[21]))
         # replace是替换，write是写入
 
     fp.close()  # 关闭文件
